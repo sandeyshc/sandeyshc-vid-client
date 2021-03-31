@@ -112,7 +112,7 @@ class VideosInsert extends Component{
                     //     headers: { 'Content-Type': 'application/json' },
                     // });
                     const apiss = Axios.create({
-                        baseURL: 'http://localhost:3001/upload',
+                        baseURL: 'https://sandy-vid.herokuapp.com/upload',
                     })
                     var body=JSON.stringify({ data: base64EncodedImage });
                     console.log("uploading",body,apiss)
@@ -173,7 +173,7 @@ class VideosInsert extends Component{
                     //     headers: { 'Content-Type': 'application/json' },
                     // });
                     const apiss = Axios.create({
-                        baseURL: 'http://localhost:3001/upload',
+                        baseURL: 'https://sandy-vid.herokuapp.com/upload',
                     })
                     // var body=JSON.stringify({ data: base64EncodedImage });
                     // console.log("uploading",body,apiss)
