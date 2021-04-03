@@ -300,6 +300,7 @@ class VideosInsert extends Component{
     }
     else{
         alert('You didn\'t upload image or video or name')
+        console.log('alert')
     }
     
 }
