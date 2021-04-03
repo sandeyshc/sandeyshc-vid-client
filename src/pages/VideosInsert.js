@@ -10,7 +10,7 @@ class VideosInsert extends Component{
 		this.state = {
 			names: "",
 			imageurl: "",
-			videourl: "www.google.com",
+			videourl: "",
             image :"",
             video:"",
             cool:"",
@@ -281,6 +281,7 @@ class VideosInsert extends Component{
     handleSubmitFile = async(e) => {
         e.preventDefault();
         const { names, imageurl, videourl }=this.state;
+        if(names!=="" && imageurl!=="" && videourl!==""){
         const payload={names,imageurl,videourl}
 
 		await api.insertVideo(payload).then((res) => {
@@ -288,11 +289,18 @@ class VideosInsert extends Component{
             console.log(this.state.cool)
 			this.setState({
 				names: "",
-				rating: "",
-				time: "",
+				video: "",
+				image: "",
+                imageurl:"",
+                videourl:"",
+                cool:"",
+                cools:""
 			});
 		});
-
+    }
+    else{
+        alert('You didn\'t upload image or video or name')
+    }
     
 }
 
