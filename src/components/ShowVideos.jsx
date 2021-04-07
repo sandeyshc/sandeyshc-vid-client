@@ -68,7 +68,7 @@ class ShowVidoes extends Component{
         // }
         console.log(!e.target.paused)
         if(!e.target.paused){
-            e.target.pause()
+            e.target.load()
         }
         else{
             console.log("Not playing")
